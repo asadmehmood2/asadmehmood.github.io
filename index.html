@@ -78,34 +78,37 @@
         }
         
         .nav-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 1.2rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
         
         .logo {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--accent);
             font-family: var(--font-mono);
-            letter-spacing: -0.5px;
+            letter-spacing: 0.5px;
             flex-shrink: 0;
         }
         
         .nav-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2.5rem;
             list-style: none;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
         
         .nav-links a {
             color: var(--text);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: var(--transition);
             position: relative;
             font-weight: 500;
@@ -344,8 +347,9 @@
         .stat-card {
             background: var(--secondary);
             border: 1px solid rgba(100, 255, 218, 0.1);
-            padding: 1.5rem;
+            padding: 2rem 1.5rem;
             transition: var(--transition);
+            text-align: center;
         }
         
         .stat-card:hover {
@@ -355,23 +359,25 @@
         }
         
         .stat-number {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--accent);
             font-weight: 700;
             display: block;
             margin-bottom: 0.5rem;
+            line-height: 1;
         }
         
         .stat-label {
             color: var(--text-dim);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
         }
         
         /* Education Section */
         .education-card {
             background: var(--secondary);
             border: 1px solid rgba(100, 255, 218, 0.1);
-            padding: 2.5rem;
+            padding: 3rem;
             transition: var(--transition);
         }
         
@@ -383,9 +389,9 @@
         .education-header {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
             border-bottom: 1px solid rgba(100, 255, 218, 0.1);
         }
         
@@ -449,20 +455,23 @@
         
         .coursework-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            row-gap: 0.5rem;
         }
         
         .coursework-item {
             color: var(--text-dim);
             font-size: 0.9rem;
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
+            line-height: 1.5;
         }
         
         .coursework-item::before {
             content: '▹';
             color: var(--accent);
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
         }
         
         /* Experience Section */
@@ -1009,6 +1018,20 @@
         }
         
         @media (max-width: 1200px) {
+            .nav-container {
+                padding: 1rem 2rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 960px) {
             .nav-links {
                 gap: 1rem;
             }
@@ -1035,7 +1058,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">AM_</div>
+            <div class="logo">Asad Mehmood</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
